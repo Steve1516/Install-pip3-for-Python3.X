@@ -5,22 +5,23 @@ pip3_python3.X
 how to install pip3 for python3.x
 ------------------------------------
 
-#一、先安装python3 
+# 一、先安装python3 
 
 安装python3.x 这里不多赘述，so easzy！！
 
-##1、先到官方网站下载python3的安装包
+## 1、先到官方网站下载python3的安装包
 
 https://www.python.org/downloads/source/  －－－我下载的是Python-3.5.2.tar.xz
 
 ##2、上传包到服务器
 
-##3.解压
+## 3.解压
 
 ```Bash
-tar -xf Python-3.5.2.tar.xz  
+tar -xf Python-3.5.2.tar.xz
+```
 
-##4.编译安装
+## 4.编译安装
 
 ！！！！注意 注意 ⚠️  在编译之前需要安装一些必须的依赖，否则当报错的时候还得重新编译 －－－（我就是吃了这个亏，千万要注意奥。。。）
 
