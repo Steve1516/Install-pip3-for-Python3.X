@@ -38,35 +38,35 @@ Install pip3 for Python3.X(With Python2.7)
   ```
 ------------------------------------
 
-# 一、Pre: Install python3 （for !Kali）
+### 一、Pre: Install python3 （for !Kali）
   
-  --> 下载Python3.X
+  ###### --> 下载Python3.X
   ```
   # wget https://www.python.org/ftp/python/3.6.1/Python-3.6.3.tar.xz
   ```
   
   
-  --> 安装依赖
+  ###### --> 安装依赖
   ```
   # yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
   ```
   
   
-  --> 解压
+  ###### --> 解压
   ```
   # tar -zxvf Python-3.6.3.tar.xz
   ```
   
   
-  --> 预建立文件夹（安装位置随意，我一般安装在opt下）
+  ###### --> 预建立文件夹（安装位置随意，我一般安装在opt下）
   ```
   # mkdir -p /opt/python3
   ```
   
   
-  --> 进入解压目录，安装</br>
+  ###### --> 进入解压目录，安装</br>
   
-  编译
+  ###### 编译
   ```
   # cd /root/Python-3.6.3
   # ./configure --prefix=/opt/python3
