@@ -2,49 +2,103 @@
 Install pip3 for Python3.X(With Python2.7)
 ================
 
-###### 'how to install pip3 for python3.x'
+###### `how to install pip3 for python3.x`
+  
+  ```
+  重要的事情说三遍：
+  如果你不知道你在做什么，千万不要动系统自带的Python2.7，也不要修改命令行默认的Python命令版本！
+  如果你不知道你在做什么，千万不要动系统自带的Python2.7，也不要修改命令行默认的Python命令版本！
+  如果你不知道你在做什么，千万不要动系统自带的Python2.7，也不要修改命令行默认的Python命令版本！
+  ```
 
-  在Kali Linux上：'Kali上同时自带Python2.7和Python3.6'。</br>
-  在默认命令行状态下，python执行的是2.7版本，然而一些新的第三方库有时需要使用Python3.X的版本；</br>
+  在Kali Linux上：`Kali上同时自带Python2.7和Python3.6`。</br>
+  在默认命令行状态下，python执行的是2.7版本，然而一些新的第三方库有时需要使用Python3.X的版本；
   这就出现了一定的问题：比如我要使用beautifulsoup，发现Pycharm(Python3.6)下执行：
   ```Python
   from bs4 import BeautifulSoup
   ```
   会报错，提示无法找到BeautifulSoup。但是在命令行下，执行：
-  ```Bash
+  ```
   python from bs4 import BeautifulSoup
   ```
   是没有问题的。那么原因出现在什么地方呢？</br>
-  原因在于：'BeautifulSoup安装在Python2.7版本下，而Python3.X下则没有'，</br>
+  原因在于：`BeautifulSoup安装在Python2.7版本下，而Python3.X下则没有`，</br>
   那么是否直接执行以下命令就行了呢？
-  ```Python
+  ```
   pip3 install BeautifulSoup4
   ```
-  很遗憾...没有pip3命令...那么安装pip3？很遗憾...找不到setuptools....GG
+  很遗憾...没有pip3命令...那么安装pip3？很遗憾...找不到setuptools....GG!</br>
   针对这个问题，我也在网上搜了一些结果，可是大部分结果要不环境不一样...要不执行完没有效果...</br>
   经整理，以下解决办法经过测试有效！
   ```
   Linux版本：Kali 2.0
   Python版本：Python3.6（并存Python2.7）
   ```
-  
+
 ------------------------------------
 
-# 一、先安装python3 
+# 一、Pre:Install python3 （for !Kali）
+  
+  --> 下载Python3.X
+  ```
+  # wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
+  ```
+  
+  --> 安装依赖
+  ```
+  # yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+  ```
+  
+  --> 解压
+  ```
+  # tar -zxvf Python-3.6.1.tar.xz
+  ```
+  
+  --> 预建立文件夹（安装位置随意，我一般安装在opt下）
+  ```
+  # mkdir -p /opt/python3
+  ```
+  
+  --> 进入解压目录，安装
+  编译
+  ```
+  # cd /root/Python-3.6.1
+  # ./configure --prefix=/opt/python3
+  ```
+  Make & Make Install
+  ```
+  # make && make install
+  ```
 
-安装python3.x 这里不多赘述，so easzy！！
+  --> 建立软链
+  ```
+  # ln -s /opt/python3/bin/python3 /usr/bin/python3
+  ```
 
-## 1、先到官方网站下载python3的安装包
-
-https://www.python.org/downloads/source/  －－－我下载的是Python-3.5.2.tar.xz
-
-##2、上传包到服务器
-
-## 3.解压
-
-```Bash
-tar -xf Python-3.5.2.tar.xz
-```
+  --> 加入PATH（可选）
+  修改
+  ```
+  # vim ~/.bash_profile
+  # .bash_profile
+  # Get the aliases and functions
+  if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+  fi
+  # User specific environment and startup programs
+  PATH=$PATH:$HOME/bin:/usr/local/python3/bin
+  export PATH
+  ```
+  生效
+  ```
+  # source ~/.bash_profile
+  ```
+  
+  --> 验证
+  ```
+  # python3 -V
+  ```
+  
+  
 
 ## 4.编译安装
 
@@ -52,9 +106,7 @@ tar -xf Python-3.5.2.tar.xz
 
 安装必要依赖（至少需要如下两个，我个人就遇到如下两个）
 
-yum install openssl-devel   -y
 
-yum install zlib-devel  -y
 
 好了现在可以安心的编译咯：
 
