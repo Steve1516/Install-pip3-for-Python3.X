@@ -72,20 +72,20 @@ Install pip3 for Python3.X(With Python2.7)
   # ./configure --prefix=/opt/python3
   ```
   
-  Make & Make Install
+  ###### Make & Make Install
   ```
   # make && make install
   ```
 
-  --> 建立软链
+  ###### --> 建立软链
   ```
   # ln -s /opt/python3/bin/python3 /usr/bin/python3
   ```
 
 
-  --> 加入PATH（可选）</br>
+  ###### --> 加入PATH（可选）</br>
   
-  修改
+  ###### 修改
   ```
   # vim ~/.bash_profile
   # .bash_profile
@@ -98,25 +98,25 @@ Install pip3 for Python3.X(With Python2.7)
   export PATH
   ```
   
-  生效
+  ###### 生效
   ```
   # source ~/.bash_profile
   ```
   
   
-  --> 验证
+  ###### --> 验证
   ```
   # python3 -V
   ```
   
-# 二、Pre: Install setuptools
+### 二、Pre: Install setuptools
 
-  --> 下载setuptools 36.6.0（Up to NOW）
+  ###### --> 下载setuptools 36.6.0（Up to NOW）
   ```
   wget --no-check-certificate  https://pypi.python.org/packages/45/29/8814bf414e7cd1031e1a3c8a4169218376e284ea2553cc0822a6ea1c2d78/setuptools-36.6.0.zip#md5=74663b15117d9a2cc5295d76011e6fd1
   ```
   
-  --> 安装
+  ###### --> 安装
   ```
   # unzip setuptools-36.6.0.zip
 
@@ -127,14 +127,14 @@ Install pip3 for Python3.X(With Python2.7)
   # python3 setup.py install
   ```
 
-# 三、Install pip3
+### 三、Install pip3
 
-  --> 下载pip-9.0.1（Up to NOW）
+  ###### --> 下载pip-9.0.1（Up to NOW）
   ```
   wget --no-check-certificate  https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9
   ```
   
-  --> 安装
+  ###### --> 安装
   ```
   tar -zxvf pip-9.0.1.tar.gz
 
@@ -145,30 +145,31 @@ Install pip3 for Python3.X(With Python2.7)
   python3 setup.py install
   ```
 
-  --> 建立软链
+  ###### --> 建立软链
   ```
   # ln -s /opt/python3/bin/pip3 /usr/bin/pip3
   ```
   
-  --> 验证
+  ###### --> 验证
   ```
   # pip3 -V
   ```
 
-# 四、Verification
+### 四、Verification
 
-  --> 模块验证
+  ###### --> 模块验证
   ```
   # python3
   >>> from bs4 import BeautifulSoup
   ```
 
-  --> 命令安装验证
+  ###### --> 命令安装验证
   ```
   # pip3 install pymysql
   ```
 
 
+----------------------------------------------
 
 FINISH！
 ===============================================
