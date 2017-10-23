@@ -1,11 +1,11 @@
 
-pip3_python3.X
+Install pip3 for Python3.X(With Python2.7)
 ================
 
 ###### 'how to install pip3 for python3.x'
 
-  在Kali Linux上部署Pycharm进行开发过程中，出现一个问题：'Kali上同时自带Python2.7和Python3.6'。
-  在默认命令行状态下，python执行的是2.7版本，然而一些新的第三方库有时需要使用Python3.X的版本；
+  在Kali Linux上：'Kali上同时自带Python2.7和Python3.6'。</br>
+  在默认命令行状态下，python执行的是2.7版本，然而一些新的第三方库有时需要使用Python3.X的版本；</br>
   这就出现了一定的问题：比如我要使用beautifulsoup，发现Pycharm(Python3.6)下执行：
   ```Python
   from bs4 import BeautifulSoup
@@ -14,7 +14,19 @@ pip3_python3.X
   ```Bash
   python from bs4 import BeautifulSoup
   ```
-  是没有问题的。那么原因出现在什么地方呢？
+  是没有问题的。那么原因出现在什么地方呢？</br>
+  原因在于：'BeautifulSoup安装在Python2.7版本下，而Python3.X下则没有'，</br>
+  那么是否直接执行以下命令就行了呢？
+  ```Python
+  pip3 install BeautifulSoup4
+  ```
+  很遗憾...没有pip3命令...那么安装pip3？很遗憾...找不到setuptools....GG
+  针对这个问题，我也在网上搜了一些结果，可是大部分结果要不环境不一样...要不执行完没有效果...</br>
+  经整理，以下解决办法经过测试有效！
+  ```
+  Linux版本：Kali 2.0
+  Python版本：Python3.6（并存Python2.7）
+  ```
   
 ------------------------------------
 
