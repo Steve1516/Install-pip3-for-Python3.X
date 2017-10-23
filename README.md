@@ -24,7 +24,7 @@ Install pip3 for Python3.X(With Python2.7)
   python from bs4 import BeautifulSoup
   ```
   是没有问题的。那么原因出现在什么地方呢？</br>
-  原因在于：`BeautifulSoup安装在Python2.7版本下，而Python3.X下则没有`，</br>
+  原因在于：`BeautifulSoup安装在Python2.7版本下，而Python3.X下则没有`</br>
   那么是否直接执行以下命令就行了呢？</br>
   ```
   pip3 install BeautifulSoup4
@@ -36,7 +36,6 @@ Install pip3 for Python3.X(With Python2.7)
   Linux版本：Kali 2.0
   Python版本：Python3.6（并存Python2.7）
   ```
-
 ------------------------------------
 
 # 一、Pre: Install python3 （for !Kali）
@@ -46,27 +45,33 @@ Install pip3 for Python3.X(With Python2.7)
   # wget https://www.python.org/ftp/python/3.6.1/Python-3.6.3.tar.xz
   ```
   
+  
   --> 安装依赖
   ```
   # yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
   ```
+  
   
   --> 解压
   ```
   # tar -zxvf Python-3.6.3.tar.xz
   ```
   
+  
   --> 预建立文件夹（安装位置随意，我一般安装在opt下）
   ```
   # mkdir -p /opt/python3
   ```
   
+  
   --> 进入解压目录，安装</br>
+  
   编译
   ```
   # cd /root/Python-3.6.3
   # ./configure --prefix=/opt/python3
   ```
+  
   Make & Make Install
   ```
   # make && make install
@@ -77,7 +82,9 @@ Install pip3 for Python3.X(With Python2.7)
   # ln -s /opt/python3/bin/python3 /usr/bin/python3
   ```
 
+
   --> 加入PATH（可选）</br>
+  
   修改
   ```
   # vim ~/.bash_profile
@@ -90,10 +97,12 @@ Install pip3 for Python3.X(With Python2.7)
   PATH=$PATH:$HOME/bin:/usr/local/python3/bin
   export PATH
   ```
+  
   生效
   ```
   # source ~/.bash_profile
   ```
+  
   
   --> 验证
   ```
@@ -161,5 +170,6 @@ Install pip3 for Python3.X(With Python2.7)
 
 
 
-#FINISH！
+FINISH！
+===============================================
  
