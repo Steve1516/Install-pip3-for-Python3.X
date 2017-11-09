@@ -26,9 +26,9 @@ Install pip3 for Python3.X(With Python2.7)
   ```
   pip3 install BeautifulSoup4
   ```
-  很遗憾...没有pip3命令...那么安装pip3？很遗憾...找不到setuptools....GG!</br>
+  很遗憾...没有pip3命令...那么安装pip3？很遗憾...找不到setuptools....</br>
   针对这个问题，我也在网上搜了一些结果，可是大部分结果要不环境不一样...要不执行完没有效果...</br>
-  经整理，以下解决办法经过测试有效！</br>
+  现将本机执行结果整理如下：</br>
   ```
   Linux版本：Kali 2.0
   Python版本：Python3.6（并存Python2.7）
