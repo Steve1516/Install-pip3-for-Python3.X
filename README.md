@@ -1,5 +1,5 @@
 
-Install pip3 for Python3.X(With Python2.7)
+Install pip3 for Python3.x With Python2.7
 ================
 
 ###### how to install pip3 for python3.x
